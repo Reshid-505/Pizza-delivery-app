@@ -5,13 +5,14 @@ import Tr from './Tr';
 import { MainContex,useContext } from '../context';
 
 function Cart() {
-  const {basket,goods,changepiece,total,changetotal,del,reset,onHide} = useContext(MainContex)
+  const {basket,goods,changepiece,total,changetotal,del,reset,onHide,modalShow} = useContext(MainContex)
   function buy(){
     reset()
     onHide()
   }
   return (
     <Modal
+      show={modalShow}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
